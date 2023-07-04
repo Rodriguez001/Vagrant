@@ -1,0 +1,15 @@
+#pour créer le Vagrantfile, on lance init dans le repertoire choisi
+vagrant init geerlingguy/centos7
+#On remplit ensuite le Vagrantfile pour definir la ram et le cpu de la vm
+#On valide la syntaxe avec 
+vagrant validate
+#ensuite on lance la creatio de la vm
+vagrant up
+#on se connecte à la lb
+vagrant ssh lb
+#on se connecte à la web1
+vagrant ssh web1
+#sortir de la vm
+logout ou exit
+#on detruit les VMs
+vagrant destroy -f

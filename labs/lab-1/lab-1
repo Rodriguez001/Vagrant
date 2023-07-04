@@ -1,0 +1,13 @@
+#creation d'une VM ubuntu avec connexion
+vagrant init ubuntu/trusty64
+vagrant up
+#pour verifier le status
+vagrant status | vagrant global-status
+#connexion
+vagrant ssh
+#pour arrêter la vm
+vagrant halt
+#supprimer la vm
+vagrant destroy
+
+
