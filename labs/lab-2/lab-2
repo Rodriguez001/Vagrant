@@ -1,0 +1,16 @@
+# 3 methodes pour recuperer les vagrant box
+1- vagrant box add --name ubuntu "url....box"
+2- vagrant box add ubuntu/trusty64
+3- vagrant box add "https://app.vagrantup.com/ubuntu/boxes/trusty64
+
+# installer suivant le versioning de la vbox
+vagrant box add ubuntu/trusty64 --box-version="la_version_souhaitée"
+vagrant init ubuntu/trusty64 --box-version="la_version_souhaitée"
+vagrant up
+vagrant ssh
+sudo apt-get update && sudo apt-get install nginx
+sudo service nginx start
+sudo service nginx status
+curl 127.0.0.1 # pour voir si la page d'accueil de nginx est bien là
+#pour creer notre vbox à partir de la vm
+vagrant package --output "nom_choisi"

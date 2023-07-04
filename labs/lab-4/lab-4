@@ -1,0 +1,18 @@
+#pour créer le Vagrantfile, on lance init dans le repertoire choisi
+vagrant init geerlingguy/centos7
+#On remplit ensuite le Vagrantfile pour definir la ram et le cpu de la vm
+#On valide la syntaxe avec 
+vagrant validate
+#ensuite on lance la creatio de la vm
+vagrant up
+#on se connecte
+ssh vagrant@10.0.0.10
+#installation de nginx
+sudo yum install nginx
+#lancer son demarrage
+sudo systemctl start nginx
+#on quitte le mode ssh
+logout
+#on detruit la vm
+vagrant destroy -f
+
